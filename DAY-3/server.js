@@ -11,6 +11,10 @@ server.post('/notes', (req,res)=>{
     res.send("notes Recieved")
 })
 
+server.get('/notes' , (req,res)=>{
+    res.send("Data Takes Sucsessfully")
+})
+
 server.listen(3000,()=>{
     console.log("server is running on port 3000")
 })
