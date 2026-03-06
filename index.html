@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+        form {
+            background: #fff;
+            width: 320px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        input, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<form>
+    <h3>Student Form</h3>
+
+    <!-- Name -->
+    <label>Name:</label>
+    <input
+        type="text"
+        name="name"
+        pattern="[A-Za-z ]+"
+        inputmode="text"
+        title="Only letters allowed"
+        required
+    >
+
+    <!-- Roll No -->
+    <label>Roll No (1–100):</label>
+    <input
+        type="number"
+        name="rollno"
+        min="1"
+        max="100"
+        required
+    >
+
+    <!-- Phone -->
+    <label>Phone Number:</label>
+    <input
+        type="tel"
+        name="phone"
+        pattern="[0-9]{10}"
+        maxlength="10"
+        inputmode="numeric"
+        title="Enter exactly 10 digits"
+        required
+    >
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

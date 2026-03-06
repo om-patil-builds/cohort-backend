@@ -1,17 +1,9 @@
-const app = require('./src/app.js')
+const mongoose = require('mongoose')
+const app = require ('./src/app.js')
+const connectToDb = require ('./src/config/database')
 
-require("dotenv").config() 
+connectToDb()
 
-const connectToDb = require ('./src/config/database.js')
-
-const mongoose = require ('mongoose')
-
-
-connectToDb();
-
-
-
-
-app.listen(3000 , ()=>{
-    console.log("Welcome to port number 3000")
+app.listen(3000 , (req,res)=>{
+    console.log("running on port no 3000")
 })
