@@ -1,0 +1,15 @@
+Authentication - identify karna ki req kis user se aayi hai
+
+
+Authorization - ek user kya kya karskta hai 
+
+
+Validation - jo data hamare pass hai us data ka format check karna kya o sahi format me hai ya nahi is process ko hum validation bolte hai
+
+ex form
+enter mobaileNumber - $aaje#%253 
+ 
+ not valid mobaile number
+
+
+Verification - data sahi hai ya nahi 
