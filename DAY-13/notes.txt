@@ -1,0 +1,51 @@
+// app aapn postman mdhe json format mdhe data lihito to data express la read karta yet nahi tya sathi aapan express.json  used karto aani express.json nahi vaparal tr undefinde deil
+
+//req.body = 1.Frontend/Postman data pathavto 2.Backend la ha data req.body madhe milto
+//By default Express la JSON samjat nahi express.json() Request body read kartoJSON → JavaScript object convert karto
+// req.body madhe store karto
+
+-Destructuring
+//Object madhun values kadun direct variables madhe store karne
+
+Without destructuring
+const obj = {
+  name: "Om",
+  email: "om@gmail.com",
+  password: "123456"
+}
+
+const name = obj.name
+const email = obj.email
+const password = obj.password
+
+👉 Barach typing 😵
+
+⚡ With destructuring
+const obj = {
+  name: "Om",
+  email: "om@gmail.com",
+  password: "123456"
+}
+
+const { name, email, password } = obj
+
+👉 Same kaam, pan short + clean 😎
+
+🧠 Tya data la kay karto destructuring?
+
+👉 Lakshat thev ha main point 👇
+
+❗ Destructuring data change kart nahi
+
+👉 Original data tasach rahto
+
+console.log(obj)
+
+👉 Output:
+
+{
+  name: "Om",
+  email: "om@gmail.com",
+  password: "123456"
+}
+
