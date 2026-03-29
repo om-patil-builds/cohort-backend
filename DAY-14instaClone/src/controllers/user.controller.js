@@ -21,7 +21,7 @@ async function registerController (req,res){
     }
 
    
-    const hashPassword = bcrypt.hash(password , 10)
+    const hashPassword = await bcrypt.hash(password , 10)
 
     const user = await userModel.create({
         username , email , password:hashPassword
@@ -54,8 +54,8 @@ async function loginController(req,res){
 
      const user = await userModel.findOne({
         $or:[
-            {username:user.username} ,
-            {email:user.email}
+            {username:username} ,
+            {email:email}
             ,
             
         ]
@@ -66,7 +66,7 @@ async function loginController(req,res){
              message: "User have no account"
         })
      }
-    const hash = await bcrypt.compare(password , user.password)
+    const isPasswordValid = await bcrypt.compare(password , user.password)
 
     
         //hashing ki acchi bat same i/p dene se same o/p harbar milega
@@ -93,7 +93,8 @@ async function loginController(req,res){
                 email:user.email,
                 bio:user.bio,
                 profileimg:user.profileimg
-            }
+            },
+            token
         })
 
         
